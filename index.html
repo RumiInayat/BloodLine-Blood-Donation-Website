@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodLife - Save Lives, Donate Blood</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- NavBar Links -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="logo.png" alt="BloodLife Logo">
+                    <span>BloodLife</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#process">Process</a>
+                    <button onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'})" class="btn-primary">Donate Now</button>
+                </div>
+                <button onclick="toggleMenu()" class="menu-btn">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu">
+            <div class="mobile-links">
+                <a href="#home" onclick="toggleMenu()">Home</a>
+                <a href="#about" onclick="toggleMenu()">About</a>
+                <a href="#process" onclick="toggleMenu()">Process</a>
+                <button onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'}); toggleMenu();" class="btn-primary">Donate Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-grid">
+                <div class="fade-in">
+                    <h1>Save Lives,<br><span class="highlight">Donate Blood</span></h1>
+                    <p>Every donation can save up to 3 lives. Be a hero today and make a difference in someone's life.</p>
+                    <div class="hero-buttons">
+                        <button onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'})" class="btn-primary">Become a Donor</button>
+                        <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})" class="btn-secondary">Learn More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Donors</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">150K+</div>
+                            <div class="stat-label">Lives Saved</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Available</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?w=800" alt="Blood Donation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Donate Blood?</h2>
+                <p>Your single donation can make a huge impact</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                    <h3>Emergency Care</h3>
+                    <p>Blood is needed every 2 seconds for accident victims, surgery patients, and emergency treatments.</p>
+                </div>
+                <div class="card">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    <h3>Cancer Treatment</h3>
+                    <p>Cancer patients may need blood transfusions during chemotherapy and treatment procedures.</p>
+                </div>
+                <div class="card">
+                    <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <h3>Save Newborns</h3>
+                    <p>Premature babies and those with complications often require blood transfusions to survive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section-gradient">
+        <div class="container">
+            <div class="section-header">
+                <h2>Donation Process</h2>
+                <p>Simple, safe, and takes less than an hour</p>
+            </div>
+            <div class="grid-4">
+                <div class="process-card">
+                    <div class="process-number">
+                        <span>1</span>
+                    </div>
+                    <h3>Registration</h3>
+                    <p>Fill out a simple form with your details</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">
+                        <span>2</span>
+                    </div>
+                    <h3>Health Screening</h3>
+                    <p>Quick health check and blood test</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">
+                        <span>3</span>
+                    </div>
+                    <h3>Donation</h3>
+                    <p>Donate blood (10-15 minutes)</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">
+                        <span>4</span>
+                    </div>
+                    <h3>Refreshments</h3>
+                    <p>Rest and enjoy snacks provided</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blood Types -->
+    <section class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>Blood Types Needed</h2>
+                <p>All blood types are valuable and needed</p>
+            </div>
+            <div class="blood-types">
+                <div class="blood-type">
+                    <div class="blood-type-label">A+</div>
+                    <div class="blood-type-desc">High Demand</div>
+                </div>
+                <div class="blood-type">
+                    <div class="blood-type-label">O+</div>
+                    <div class="blood-type-desc">Universal Donor</div>
+                </div>
+                <div class="blood-type">
+                    <div class="blood-type-label">B+</div>
+                    <div class="blood-type-desc">High Demand</div>
+                </div>
+                <div class="blood-type">
+                    <div class="blood-type-label">AB+</div>
+                    <div class="blood-type-desc">Rare Type</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Foe Donation Form -->
+    <section id="donate" class="section-gradient">
+        <div class="container form-container">
+            <div class="section-header">
+                <h2>Register as a Donor</h2>
+                <p>Fill out the form below to become a life-saving hero</p>
+            </div>
+            <div class="form-card">
+                <form onsubmit="handleSubmit(event)">
+                    <div>
+                        <label>Full Name</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label>Phone</label>
+                            <input type="tel" required>
+                        </div>
+                        <div>
+                            <label>Age</label>
+                            <input type="number" min="18" max="65" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label>Blood Type</label>
+                            <select required>
+                                <option value="">Select Blood Type</option>
+                                <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+                                <option>AB+</option><option>AB-</option><option>O+</option><option>O-</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Weight (kg)</label>
+                            <input type="number" min="18" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Address</label>
+                        <textarea required rows="3"></textarea>
+                    </div>
+                    <div>
+                        <label>Any Diseases (if any)</label>
+                        <textarea rows="2" placeholder="Please mention any medical conditions or diseases"></textarea>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" required>
+                        <label>I confirm that I am healthy and eligible to donate blood</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Registration</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donor Stories -->
+    <section class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>Donor Stories</h2>
+                <p>Hear from our amazing donors</p>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">John Smith</div>
+                            <div class="testimonial-role">Regular Donor</div>
+                        </div>
+                    </div>
+                    <p>"Donating blood makes me feel like I'm making a real difference. It's quick, easy, and incredibly rewarding."</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Sarah Johnson</div>
+                            <div class="testimonial-role">First-time Donor</div>
+                        </div>
+                    </div>
+                    <p>"I was nervous at first, but the staff was amazing. Knowing I helped save lives is the best feeling ever!"</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Mike Davis</div>
+                            <div class="testimonial-role">50+ Donations</div>
+                        </div>
+                    </div>
+                    <p>"I've been donating for 10 years. It's become a part of who I am. Every donation counts!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <div id="successPopup">
+        <div class="popup-content">
+            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <h3>Thank You!</h3>
+            <p>Your registration has been submitted successfully. Our team will contact you soon to schedule your donation.</p>
+            <button onclick="closePopup()" class="btn-primary">Close</button>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="BloodLife Logo">
+                        <h3>BloodLife</h3>
+                    </div>
+                    <p class="footer-text">Saving lives, one donation at a time.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#process">Process</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><svg fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg> +92 0000000000</p>
+                        <p><svg fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg> mail@mail.com</p>
+                        <p><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg> UOCH CHITRAL KPK</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Emergency</h4>
+                    <p class="footer-text" style="margin-bottom: 1rem;">Need blood urgently?</p>
+                    <button class="btn-primary">Call Now</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> BloodLife. All rights reserved. Save lives today.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        function handleSubmit(e) {
+            e.preventDefault();
+            document.getElementById('successPopup').classList.add('show');
+            e.target.reset();
+        }
+        
+        function closePopup() {
+            document.getElementById('successPopup').classList.remove('show');
+        }
+        
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
